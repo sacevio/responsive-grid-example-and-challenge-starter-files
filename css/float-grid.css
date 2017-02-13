@@ -14,6 +14,12 @@
  *   so 960 + 20 + 20 => 1000px
  *
  **/
+
+
+
+/*the reason for the 20px padding in the first ruleset is to avoid content coming right
+up to the edges in small viewport*/
+
 .row {
   max-width: 1000px;
   padding-left: 20px;
@@ -21,7 +27,8 @@
   margin: 0 auto;
 }
 
-/* Clearfix */
+/* Clearfix. This ruleset forces the height of each row to expand to the height of its
+tallest child element*/
 .row::before,
 .row::after {
   display: table;
@@ -60,14 +67,16 @@
 
   /* 4 columns */
   .col-4 {
+    width: 33.33%;
   }
 
   /* 6 columns */
   .col-6 {
-
+    width: 50%;
   }
 
   /* 12 columns */
   .col-12 {
+    width: 100%;
   }
 }
